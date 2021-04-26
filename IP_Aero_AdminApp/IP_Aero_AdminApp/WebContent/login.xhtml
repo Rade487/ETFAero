@@ -1,0 +1,41 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+	<title>Login</title>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" http-equiv="X-UA-Conpatible" />
+   <h:outputStylesheet name="/css/style.css" /> 
+</h:head>
+<h:body>
+<header>
+		<nav class="navbar navbar-expand-md navbar-dark"
+			style="background-color: DarkSlateGrey">
+		</nav>
+	</header>	
+	<div class="login"> 
+		<section class="form animated flipInX">
+	  <h2>Admin prijava</h2>
+	<h:form id="loginForm">
+		<div class="form-group">
+		<h:outputText value="Korisnicko ime" />
+		<h:inputText id="username" class="form-control" required="true" requiredMessage="Polje je obavezno" value="#{userBean.user.username}"></h:inputText>
+		<h:message for="username" style="color:red"></h:message>
+		</div>
+		
+		<div class="form-group">
+				<h:outputText value="Lozinka" />
+				<h:inputSecret id="password" class="form-control" required="true" requiredMessage="Polje je obavezno" value="#{userBean.user.password}"></h:inputSecret>
+				<h:message for="password" style="color:red"></h:message>
+		</div>
+		<p>
+			
+		<br></br>
+		
+		<h:commandButton action="#{userBean.login}"	styleClass="btn btn-default" value="Prijavi se"></h:commandButton>
+		</p>
+	</h:form>
+	</section>
+	</div>
+</h:body>
+</html>

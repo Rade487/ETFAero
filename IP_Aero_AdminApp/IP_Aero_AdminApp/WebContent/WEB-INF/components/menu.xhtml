@@ -1,0 +1,35 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+	<ui:composition>
+	
+		<h:form>
+    <div class="navbar navbar-light navbar-fixed-top" style="background-color: #114678;" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+              
+                <a class="navbar-brand" style="text-decoration:none;color:white;" href="index.xhtml">POCETNA</a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="users.xhtml" style="text-decoration:none;color:white;">Korisnici</a></li>
+                    <li><a href="employee.xhtml" style="text-decoration:none;color:white;">Zaposleni</a></li>
+                    <li><a href="locations.xhtml" style="text-decoration:none;color:white;">Lokacije</a></li>
+                    
+                    
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+            	    <li> 
+                        <h:commandLink style="text-decoration:none;color:white;text-align: right;float:right;" value="Odjavi se" action="#{userBean.logout}" >
+                        </h:commandLink>    
+                    </li>
+                </ul>
+            </div>
+            
+            <!--/.nav-collapse -->
+        </div>
+    </div>
+</h:form>
+	</ui:composition>
+</html>

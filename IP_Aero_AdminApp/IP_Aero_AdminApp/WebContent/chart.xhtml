@@ -1,0 +1,33 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui">
+
+     <h:head>
+
+     </h:head>
+
+     <h:body>
+
+    
+    <h:panelGrid column="1">
+
+   <h:panelGroup style="display:block; text-align:center">
+
+           
+      
+
+   </h:panelGroup>
+
+</h:panelGrid>
+    <div class="card" style="text-align:center">
+                    <h1>Broj pristupa korisnickoj aplikaciji u poslednjih 30 dana</h1>
+                    <h:form id="form">
+                        <p:panelGrid columns="2" style="border:0px !important; background:none;margin:0 auto">
+                              
+							  <p:chart type="line" model="#{chartBean.lineModel}" style="height:500px;width:800px"/>
+                        </p:panelGrid>
+                    </h:form>
+                </div>
+     </h:body>
+</html>

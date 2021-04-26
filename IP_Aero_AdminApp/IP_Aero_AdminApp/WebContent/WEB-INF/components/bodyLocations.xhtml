@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+	<h:head>
+	<title>Lokacije</title>
+	
+</h:head>
+<ui:composition>
+	<h:form>
+		<div class="panel panel-primary">
+    <div class="panel-heading">
+     <h4>Lista lokacija</h4> 
+    </div>
+		<h:dataTable binding="#{table}" value="#{routeBean.all}" var="r"
+			class="table table-striped table-hover table-bordered">
+			<h:column>
+				<f:facet name="header">ID</f:facet>
+				<h:outputText value="#{table.rowIndex + 1}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">Polazna drzava</f:facet>
+				<h:outputText value="#{r.origin_country}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">Polazni grad</f:facet>
+				<h:outputText value="#{r.origin_town}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">Odredisna drzava</f:facet>
+				<h:outputText value="#{r.destination_country}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">Odredisni grad</f:facet>
+				<h:outputText value="#{r.destination_town}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">Izmijeni</f:facet>
+				<h:commandButton action="#{routeBean.edit(r.id)}" value="Izmijeni"
+					class="btn btn-primary">
+				</h:commandButton>
+			</h:column>
+			<h:column>
+				<f:facet name="header">Izbrisi</f:facet>
+				<h:commandButton action="#{routeBean.delete(r.id)}" value="Izbrisi"
+					class="btn btn-danger">
+				</h:commandButton>
+			</h:column>
+		</h:dataTable>
+		</div>
+		<center>
+				<h:commandButton action="#{routeBean.reset}"
+				value="Kreiraj novu lokaciju" class="btn btn-success"></h:commandButton>
+		</center>
+	</h:form>
+</ui:composition>
+
+</html>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<title>Kreiranje zaposlenog</title>
+
+</h:head>
+<h:body>
+	<h:form>
+		<table width="100%" cellpadding="0" cellspacing="0" border="0"
+			align="center" class="outer_table">
+
+			<tr>
+
+
+				<td>
+
+					<table width="500" cellpadding="0" cellspacing="0"
+						border="0" align="center">
+
+						<tr>
+
+							<td align="center">
+								<h2 style="text-align: center">Podaci o novom zaposlenom</h2>
+								<hr /> <h:panelGrid columns="1" cellpadding="5">
+
+									<h:outputLabel for="username">Korisnicko ime</h:outputLabel>
+									<h:inputText style="width: 400px;" id="username-id"
+										value="#{userBean.user.username}" class="form-control"
+										validatorMessage="Dozvoljen je unos samo karaktera i brojeva" requiredMessage="Polje je obavezno" required="true">
+										<f:validateRegex pattern = "[a-zA-Z0-9]*" />
+										<f:validateRequired/>
+									</h:inputText>
+									<h:message for="username-id" style="color:red" />
+									
+									<h:outputLabel for="password">Lozinka</h:outputLabel>
+									<h:inputSecret style="width: 400px;" id="password-id"
+										value="#{userBean.user.password}" class="form-control"
+										vvalidatorMessage="Dozvoljen je unos samo karaktera i brojeva" requiredMessage="Polje je obavezno" required="true">
+										<f:validateRequired/>
+									</h:inputSecret>
+									<h:message for="password-id" style="color:red" />
+									
+									
+									<h:outputLabel for="email">Email</h:outputLabel>
+									<h:inputText style="width: 400px;" id="email-id"
+										value="#{userBean.user.email}" class="form-control"
+										validatorMessage="Email adresa nije ispravna" requiredMessage="Polje je obavezno" required="true">
+										<f:validateRegex pattern = "^\S+@\S+$" />
+									</h:inputText>
+									<h:message for="email-id" style="color:red" />
+									
+									<h:outputLabel for="email">Ime</h:outputLabel>
+									<h:inputText style="width: 400px;" id="name-id"
+										value="#{userBean.user.name}" class="form-control"
+										validatorMessage="Dozvoljen je unos samo karaktera" requiredMessage="Polje je obavezno" required="true">
+										<f:validateRegex pattern = "[A-Za-z]+" />
+										<f:validateRequired />
+									</h:inputText>
+									<h:message for="name-id" style="color:red" />
+									
+									<h:outputLabel for="email">Prezime</h:outputLabel>
+									<h:inputText style="width: 400px;" id="lastname-id"
+										value="#{userBean.user.lastName}" class="form-control"
+										validatorMessage="Dozvoljen je unos samo karaktera" requiredMessage="Polje je obavezno" required="true">
+										<f:validateRegex pattern = "[A-Za-z]+" />
+										<f:validateRequired />
+									</h:inputText>
+									<h:message for="lastname-id" style="color:red" />
+									
+									<h:outputLabel for="address">Adresa</h:outputLabel>
+									<h:inputText style="width: 400px;" id="address-id"
+										value="#{userBean.user.address}" class="form-control"
+										validatorMessage="Dozvoljen je unos samo karaktera" requiredMessage="Polje je obavezno" required="true">
+										<f:validateRequired />
+									</h:inputText>
+									<h:message for="address-id" style="color:red" />
+									
+									<h:outputLabel for="country">Drzava</h:outputLabel>
+									<h:inputText style="width: 400px;" id="country-id"
+										value="#{userBean.user.country}" class="form-control"
+										validatorMessage="Dozvoljen je unos samo karaktera" requiredMessage="Polje je obavezno" required="true">
+										<f:validateRequired />
+									</h:inputText>
+									<h:message for="country-id" style="color:red" />
+						
+				<br/>
+				<h:commandButton value="Sacuvaj" action="#{userBean.addEmployee}"
+				class="btn btn-success" style="width: 80px;"></h:commandButton>
+								</h:panelGrid>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</h:form>
+	
+
+
+</h:body>
+</html>
