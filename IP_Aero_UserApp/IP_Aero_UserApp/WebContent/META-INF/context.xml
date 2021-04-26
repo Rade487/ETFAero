@@ -1,0 +1,6 @@
+<Context>
+           <ResourceLink name="jdbc/basicb"
+             			 global="jdbc/basicb"
+           				 type="javax.sql.DataSource" />
+           				
+</Context>

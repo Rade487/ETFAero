@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+<channel>
+	<title>RSS test info</title>
+	<link>https://www.etf.unibl.org</link>
+	<description>RSS test info</description>
+	<language>en</language>
+	<copyright>Copyright hold by IP2019</copyright>
+	<pubdate>Fri, 26 Feb 2021 14:12:25 +0100</pubdate>
+<item>
+	<title>a</title>
+	<description>a</description>
+	<link>a</link>
+	<author>a</author>
+	<guid>a</guid>
+
+</item>
+
+</channel>
+</rss>
